@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Image Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/6f37e727c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="mainmain">
+    <center>
+        <div class="mainsection">
+
+            <div class="bar">
+                <input style="display:inline-block;" id="searchbar" class="searchbar" type="text" title="Search">
+                <span>
+                    <a style="display:inline-block;" href="#" onclick="searchFromVoice()">
+                        <i class="fa-solid fa-microphone fa-lg voice" style="display:inline" title="Search by Voice"></i>
+                    </a>
+                </span>
+            </div>
+
+            <div class="buttons">
+                <input type="file" id="file_id" onchange="previewFile(this);" hidden="hidden" />
+                <button onclick="search()" class="button" type="button">Search</button>
+                <button onclick="uploadImage()" class="button" type="button">Upload</button>
+
+            </div>
+
+        </div>
+
+        <div class="container" id="images">
+        </div>
+
+    </center>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="./assets/js/apigClient.js"></script>
+
+</body>
+
+</html>
