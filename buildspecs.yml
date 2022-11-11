@@ -1,0 +1,6 @@
+version: 0.2
+phases:
+ build:
+   commands:
+     - echo "Copying to S3"
+     - aws s3 sync "./frontend" "s3://b1-frontend-store"
